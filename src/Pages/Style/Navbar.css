@@ -1,0 +1,82 @@
+.card {
+    background: linear-gradient(135deg, #d6d6db, #1e1e33);
+    padding: 10px;
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+}
+
+.p-menubar {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.p-menubar .p-menuitem-link {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.p-menubar .p-menuitem-link:hover {
+    color: #ffd700; /* Bright Gold */
+}
+
+.p-menubar .p-menuitem-icon {
+    color: #ffffff;
+}
+
+.p-button {
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.p-button-outlined.p-button-primary {
+    border-color: #ffa500; /* Orange */
+    color: #ffa500;
+}
+
+.p-button-outlined.p-button-primary:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+.flex.gap-2 {
+    gap: 0.5rem;
+}
+
+.p-menubar-root-list > .p-menuitem {
+    margin-right: 15px;
+}
+
+.custom-menubar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .custom-menubar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .p-menubar-root-list {
+        flex-direction: column;
+        width: 100%;
+    }
+    .p-menubar-root-list > .p-menuitem {
+        margin: 10px 0;
+    }
+    .p-button {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
