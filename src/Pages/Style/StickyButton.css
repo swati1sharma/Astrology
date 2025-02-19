@@ -1,16 +1,16 @@
 .sticky-buttons {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 60px;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    gap: 25px;
     z-index: 9999;
     animation: fadeIn 1s ease-in;
 }
 
 .p-button {
-    padding: 12px 25px;
+    padding: 20px 37px;
     font-size: 16px;
     font-weight: bold;
     border-radius: 30px;

@@ -1,0 +1,46 @@
+.horoscope-heading {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .horoscope-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .horoscope-item {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .horoscope-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .horoscope-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .horoscope-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+  }
+  

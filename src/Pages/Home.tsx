@@ -1,14 +1,14 @@
 import Navbar from './Navbar';
 import HeroSection from './HeroSection';
-import StickyButtons from './StickyButtons';
-import Offer from "./Offer";
+import Footer from './Footer';
+import Horoscope from './Horoscope';
 export default function Home() {
   return (
     <>
         <Navbar/>
-        <HeroSection/>
-        <StickyButtons/> 
-        <Offer/>
+        <HeroSection/> 
+        <Horoscope/>
+        <Footer/>
     </>
   )
 }
