@@ -1,7 +1,6 @@
 import { Card } from "primereact/card";
 // import { Grid, Row, Col } from "primereact/grid";
 import { classNames } from "primereact/utils";
-
 const astroServices = [
   { label: "Kundli (Birth Chart)", icon: "pi pi-book" },
   { label: "Horoscope Matching", icon: "pi pi-heart" },
@@ -36,7 +35,6 @@ const astroServices = [
   { label: "Chinese Astrology", icon: "pi pi-globe" },
   { label: "Kaalsarp Dosha", icon: "pi pi-exclamation-triangle" },
 ];
-
 export default function AstroServices() {
   return (
     <div className="p-4">

@@ -24,8 +24,6 @@ export default function Footer() {
           <li>Astrology News</li>
           <li>Upcoming Visits</li>
           <li>Karma Astro Mobile App</li>
-          <li>Videos</li>
-          <li>Author</li>
         </ul>
       </div>  
       
@@ -51,7 +49,6 @@ export default function Footer() {
           <li>Contact Us</li>
           <li>Privacy Policy</li>
           <li>Payment Terms & Conditions</li>
-          <li>Sitemap</li>
         </ul>
       </div>
     </div>

@@ -4,19 +4,23 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 10px;
-    padding: 20px;
+    background-color: #7f3704;/* Dark grey for a premium feel */
+    color: #ffffff; /* White text for better readability */
+    padding: 40px 20px;
   }
   
   .footer-item {
     flex: 1 1 250px;
     text-align: center;
-    padding: 15px;
-    background-color: #f0f0f0;
     border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparency for a subtle contrast */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border for depth */
+    border-radius: 8px;
+    padding: 20px;
   }
   
   .footer-container ul {
-    list-style-type: disc;
+    list-style-type: none;
     text-align: left;
     padding-left: 20px;
   }
@@ -24,7 +28,7 @@
   .know-more {
     display: block;
     margin-top: 8px;
-    color: #007bff;
+    color: #f4b400; 
     text-decoration: none;
   }
   

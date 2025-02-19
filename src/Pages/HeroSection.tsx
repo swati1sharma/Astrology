@@ -4,6 +4,8 @@ import { Card } from "primereact/card";
 import axios from "axios";
 import "./Style/HeroSection.css";
 import { Button } from "primereact/button";
+import StickyButtons from "./StickyButtons";
+import "../Pages/Style/HeroSection.css";
 
 export default function HeroSection() {
   const [products, setProducts] = useState([]);
@@ -44,14 +46,15 @@ export default function HeroSection() {
 
   return (
     <div className="hero-container">
+      <h2 className="hero-heading">Unlock the Secrets of Your Destiny with Pandit Punit Vyas</h2>
       <div className="carousel-container">
         <Carousel
           value={products}
           itemTemplate={itemTemplate}
-          numVisible={3} // Keeps 3 items visible on larger screens
+          numVisible={3} 
           className="carousel-fullscreen"
-          showNavigators // Keeps navigation buttons
-          showIndicators={false} // Removes scrolling indicators
+          showNavigators 
+          showIndicators={false} 
           prevIcon={
             <i className="pi pi-chevron-left" style={{ fontSize: "2em", color: "#FF5722" }} />
           }
@@ -60,20 +63,7 @@ export default function HeroSection() {
           }
         />
       </div>
-      <div className="sticky-buttons">
-        <Button
-          label="Chat Now"
-          icon="pi pi-comments"
-          className="p-button-success"
-          onClick={() => alert("Chat Now clicked")}
-        />
-        <Button
-          label="Call Now"
-          icon="pi pi-phone"
-          className="p-button-warning"
-          onClick={() => alert("Call Now clicked")}
-        />
-      </div>
+     <StickyButtons/>
     </div>
   );
 }
