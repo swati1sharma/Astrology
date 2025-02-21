@@ -7,6 +7,7 @@ import About from './Pages/About';
 import Products from './Pages/Products';
 import Offer from "./Pages/Offer";
 import "./App.css";
+import SubProductsDetails from './Pages/SubProductsDetails';
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Route path='/offer' element={<Offer/>}/>
         <Route path="/contact" element={<ContactUs />} />
         <Route path='/about' element={<About/>}/>
+        <Route path='/subproductsdetails/:id' element={<SubProductsDetails/>}/>
       </Routes>
     </Router>
   );

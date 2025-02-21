@@ -1,5 +1,10 @@
+import Footer from "./Footer";
+import ProductsDetails from "./ProductsDetails";
 export default function Products() {
   return (
-    <div>Products</div>
+    <div>
+     <ProductsDetails/>
+    <Footer/>
+    </div>
   )
 }

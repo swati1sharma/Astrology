@@ -1,0 +1,23 @@
+.contact_heading {
+    text-align: center;
+    font-size: 3vw; /* Responsive font size */
+}
+.contact_container {
+    padding-top: 150px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .contact_heading {
+        font-size: 5vw; 
+        margin-top: 5%;
+    }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+    .contact_heading {
+        font-size: 6vw;
+       
+    }
+}

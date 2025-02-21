@@ -3,7 +3,6 @@ import { Carousel } from "primereact/carousel";
 import { Card } from "primereact/card";
 import axios from "axios";
 import "./Style/HeroSection.css";
-import { Button } from "primereact/button";
 import StickyButtons from "./StickyButtons";
 import "../Pages/Style/HeroSection.css";
 
@@ -55,6 +54,10 @@ export default function HeroSection() {
           className="carousel-fullscreen"
           showNavigators 
           showIndicators={false} 
+          responsiveOptions={[
+    { breakpoint: '1024px', numVisible: 2, numScroll: 1 },
+    { breakpoint: '768px', numVisible: 1, numScroll: 1 } // Show only one item on mobile
+  ]}
           prevIcon={
             <i className="pi pi-chevron-left" style={{ fontSize: "2em", color: "#FF5722" }} />
           }
