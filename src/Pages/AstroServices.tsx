@@ -1,6 +1,7 @@
 import { Card } from "primereact/card";
-// import { Grid, Row, Col } from "primereact/grid";
 import { classNames } from "primereact/utils";
+import "primeflex/primeflex.css";
+
 const astroServices = [
   { label: "Kundli (Birth Chart)", icon: "pi pi-book" },
   { label: "Horoscope Matching", icon: "pi pi-heart" },
@@ -35,21 +36,22 @@ const astroServices = [
   { label: "Chinese Astrology", icon: "pi pi-globe" },
   { label: "Kaalsarp Dosha", icon: "pi pi-exclamation-triangle" },
 ];
+
 export default function AstroServices() {
   return (
     <div className="p-4">
-      <Grid className="grid">
+      <div className="grid">
         {astroServices.map((service, index) => (
-          <Col key={index} xs={12} sm={6} md={4} lg={3} className="p-2">
+          <div key={index} className="col-12 sm:col-6 md:col-4 lg:col-3 p-2">
             <Card className={classNames("p-3 text-center", { "bg-primary text-white": service.highlight })}>
               <div className="flex flex-column align-items-center">
                 <i className={classNames(service.icon, "text-3xl mb-2")}></i>
                 <span className="font-semibold">{service.label}</span>
               </div>
             </Card>
-          </Col>
+          </div>
         ))}
-      </Grid>
+      </div>
     </div>
   );
 }
