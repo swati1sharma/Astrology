@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Carousel } from "primereact/carousel";
 import { Card } from "primereact/card";
@@ -6,19 +7,26 @@ import "./Style/HeroSection.css";
 import StickyButtons from "./StickyButtons";
 import "../Pages/Style/HeroSection.css";
 
+type Product = {
+  id: number;
+  name: string;
+  image: string;
+  price: string;
+};
+
 export default function HeroSection() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((response) => {
-        console.log("API Response:", response.data); 
-  
-        if (Array.isArray(response.data) && response.data.length > 0) { 
-          const fetchedProducts = response.data.slice(0, 9).map((item, index) => {
-            console.log(`Index: ${index}, Item:`, item); // 
-  
+        console.log("API Response:", response.data);
+
+        if (Array.isArray(response.data) && response.data.length > 0) {
+          const fetchedProducts: Product[] = response.data.slice(0, 9).map((item, index) => {
+            console.log(`Index: ${index}, Item:`, item);
+
             return {
               id: index + 1,
               name: `Astro Product ${index + 1}`,
@@ -26,23 +34,20 @@ export default function HeroSection() {
               price: `$${(index + 1) * 10}`,
             };
           });
-  
-          setProducts(fetchedProducts);
 
+          setProducts(fetchedProducts);
         } else {
           console.error("Unexpected API response format");
         }
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
-  
 
-
-  const itemTemplate = ( product ) => {
+  const itemTemplate = (product: Product) => {
     if (!product || !product.id) {
       return <div>No Product Found</div>;
     }
-  
+
     return (
       <div className="product-card">
         <Card key={product.id} className="product-card">
@@ -54,7 +59,6 @@ export default function HeroSection() {
       </div>
     );
   };
-  
 
   return (
     <div className="hero-container">
@@ -67,7 +71,7 @@ export default function HeroSection() {
           numScroll={1}
           className="carousel-fullscreen"
           showNavigators={true}
-          showIndicators={true} 
+          showIndicators={true}
           responsiveOptions={[
             { breakpoint: "1024px", numVisible: 2, numScroll: 1 },
             { breakpoint: "768px", numVisible: 1, numScroll: 1 },
@@ -84,43 +88,3 @@ export default function HeroSection() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
