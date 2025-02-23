@@ -1,9 +1,9 @@
 import Footer from "./Footer";
-// import ProductsDetails from "./ProductsDetails";
+import ProductsDetails from "./ProductsDetails";
 export default function Products() {
   return (
     <div>
-     {/* <ProductsDetails/> */}
+     <ProductsDetails/>
     <Footer/>
     </div>
   )

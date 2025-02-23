@@ -1,55 +1,170 @@
-.main-content {
-    padding-top: 140px; /* Adjust based on the navbar height */
-    text-align: center;
-    color: #333;
+/* About Page Styling */
+.about-container {
+    width: 100%;
+    min-height: 100vh; 
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Prevent too much empty space on mobile */
     background-color: #f8f9fa;
-    min-height: 100vh;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-
-h1 {
-    font-size: 4vw; 
-    margin-bottom: 20px;
-    color: #1e1e33;
-}
-
-/* Responsive Paragraph */
-p {
-    font-size: 1.2vw; /* Adjust text size dynamically */
-    line-height: 1.5;
-    max-width: 800px;
     margin: 0 auto;
+    padding: 150px 20px; 
+    text-align: center;
 }
 
-/* Mobile Optimization */
+/* Heading */
+.about_heading {
+    font-size: 3rem;
+    color: #1e1e33;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Profile Card */
+.profile-card {
+    width: 60%;
+    max-width: 500px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    width: 170px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 4px;
+}
+
+.username, .join-date {
+    color: #666;
+    font-size: 1rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.chat-button {
+    background: #ff6600;
+    border: none;
+    margin-top: 10px;
+}
+
+/* Section Cards */
+.about-section, .awards-section, .contact-section {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Info Boxes */
+.info-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    padding: 10px 15px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Achievements */
+.awards-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.awards-section li {
+    font-size: 1rem;
+    padding: 5px 0;
+}
+
+/* Contact Buttons */
+.contact-button {
+    margin: 5px;
+    background: #ff6600;
+    border: none;
+}
+.about_profile_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about_heading {
+        font-size: 2.5rem;
+        margin-top: 5%;
+    }
+}
+
 @media (max-width: 768px) {
-    .main-content {
-        padding-top: 140px; /* More padding for mobile */
-        padding-left: 3%;
-        padding-right: 3%;
+    .about-container {
+       
+        padding: 60px;
+        justify-content: flex-start; /* Avoid too much empty space */
     }
 
-    h1 {
-        font-size: 5vw; /* Increase size on smaller screens */
+    .about_heading {
+        font-size: 2.2rem;
     }
 
-    p {
-        font-size: 4vw; /* Bigger text for readability */
+    .profile-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 850px;
+    }
+    
+
+    .stats {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .info-boxes {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
 @media (max-width: 480px) {
-    .main-content {
-        padding-top: 160px; /* Further padding for very small screens */
+    .about-container {
+        padding: 20px;
+        min-height: auto; /* Prevent too much height on small screens */
     }
 
-    h1 {
-        font-size: 6vw;
+    .about_heading {
+        font-size: 2rem;
     }
 
-    p {
-        font-size: 4.5vw;
+    .profile-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .contact-button {
+        width: 100%;
     }
 }
