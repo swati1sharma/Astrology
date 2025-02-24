@@ -46,18 +46,7 @@ const Navbar = () => {
             <Menubar model={items} end={endContent} className="custom-menubar" />
           
             
-{/* <div className="scrolable_navbar">
-    <marquee behavior="scroll" direction="left" scrollamount="5">
-        <button className="new-badge">NEW</button>
-        <span>Get personalised yearly Health Horoscope 2025</span>
 
-        <button className="new-badge">NEW</button>
-        <span>Get personalised yearly Love Horoscope 2025</span>
-
-        <button className="new-badge">NEW</button>
-        <span>Get personalised yearly Financial Horoscope 2025</span>
-    </marquee>
-</div> */}
 
 <div className="scrolable_navbar">
     <div className="marquee">

@@ -17,9 +17,9 @@ export default function AboutPage() {
       <p className="join-date">📅 Joined December 2024</p>
     </div>
     <div className="stats">
-      <span>189 Followers</span>
-      <span>0 Following</span>
-      <span>0 Views</span>
+      <span className="stats-button">189 Followers</span>
+      <span className="stats-button">0 Following</span>
+      <span className="stats-button">0 Views</span>
     </div>
   </div>
 </Card>

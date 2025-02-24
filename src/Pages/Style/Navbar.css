@@ -1,21 +1,25 @@
-.card {
-   padding: 0 10px;
-    width: 100%; 
+/* General Card (Header) Styling */
+.card { 
+    padding: 0;
+    width: 100vw; 
     position: fixed; 
     top: 0; 
     left: 0; 
     z-index: 1000; 
-    color:#fff ;
+    color: #fff;
+    height: auto; /* Remove static height */
 }
 
-
+/* PrimeReact Menubar Styling */
 .p-menubar {
     background-color: transparent;
     border: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center; /* Ensure alignment */
 }
+
 .p-menubar .pi {
     color: #ff9800 !important;  /* Change icon color to orange */
     font-size: 20px;  /* Increase icon size */
@@ -41,6 +45,7 @@
     color: #ffffff;
 }
 
+/* Button Styling */
 .p-button {
     border-radius: 20px;
     font-weight: 600;
@@ -51,6 +56,7 @@
     border-color: #ffa500; 
     color: #ffa500;
     padding: 10px;
+    margin-right: 12px;
 }
 
 .p-button-outlined.p-button-primary:hover {
@@ -58,22 +64,28 @@
     color: #fff;
 }
 
+/* Flex Styling */
 .flex.gap-2 {
     gap: 0.3rem;
     align-items: center;
 }
 
+/* Menubar Root List */
 .p-menubar-root-list > .p-menuitem {
     margin-right: 15px;
 }
 
+/* Custom Menubar (Navbar) */
 .custom-menubar {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Fix alignment */
     background-color:#ffffff;
+    padding: 10px 15px; /* Add spacing */
+    height: auto; /* Remove fixed height */
 }
+
 .custom-menubar .p-menubar-root-list {
     flex-grow: 1; 
 }
@@ -81,20 +93,8 @@
 .custom-menubar .p-menubar-end {
     white-space: wrap; 
 }
-.scrolable_navbar_sectionOne{
-    padding: 2px;
-    width: 5vw;
-    background-color: #f06909;
-    border-radius: 6px;
-    margin-top: -2%;
-}
 
-.main-navbar {
-    width: 100%;
-    background: #1e1e33; /* Dark navy blue for contrast */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 12px 0;
-}
+/* Scrollable Navbar */
 .scrolable_navbar {
     background-color: #e67f36;
     width: 100%;
@@ -106,17 +106,77 @@
     position: relative;
 }
 
+/* Scrollable Navbar Section */
 .scrolable_navbar_sectionOne {
     padding: 5px 12px;
     background-color: #f06909;
     border-radius: 6px;
     font-weight: bold;
     color: white;
-    white-space: nowrap; /* Ensures it stays in one line */
+    white-space: nowrap; 
     display: flex;
     align-items: center;
-    margin-right: 15px; /* Space between "Popular Reports" and marquee */
+    margin-right: 15px; 
 }
+
+/* Marquee Styling */
+.scrolable_navbar marquee {
+    flex-grow: 1; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.scrolable_navbar marquee span {
+    margin-right: 25px; 
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+}
+
+/* Marquee Scrolling Effect */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to right, #ff7f00, #ff5500); /* Stylish Orange Gradient */
+    padding: 12px 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif; 
+    text-transform: uppercase;
+}
+
+.marquee-content {
+    display: inline-block;
+    gap: 50px;
+    white-space: nowrap;
+    animation: marquee-scroll 22s linear infinite;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Stylish Badge */
+.new-badge {
+    background: white;
+    color: #ff5500;
+    padding: 6px 12px;
+    border-radius: 50px;
+    margin: 0 15px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 
 .scrolable_navbar marquee {
     flex-grow: 1; 
@@ -125,7 +185,7 @@
 }
 
 .scrolable_navbar marquee span {
-    margin-right: 25px; /* Adds space between moving elements */
+    margin-right: 25px; 
     display: inline-flex;
     align-items: center;
     font-size: 16px;
@@ -173,72 +233,16 @@
     text-transform: uppercase;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .marquee {
         font-size: 16px;
         padding: 10px 0;
     }
-
     .new-badge {
         padding: 5px 10px;
         font-size: 14px;
     }
-}
-
-@media (max-width: 480px) {
-    .marquee {
-        font-size: 14px;
-    }
-
-    .new-badge {
-        padding: 4px 8px;
-        font-size: 12px;
-    }
-}
-
-
-.new-badge {
-    background-color: red;
-    color: white;
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-.main-navbar .pi {
-    font-size: 22px;  /* Bigger icons */
-    color: #ffd700; /* Bright Gold for visibility */
-    margin-right: 8px;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.main-navbar a {
-    color: #ffffff;  /* White text */
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-.main-navbar a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffd700; /* Gold on hover */
-}
-
-.main-navbar a:hover .pi {
-    color: #ffa500; /* Orange on hover */
-    transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
     .custom-menubar {
         flex-direction: column;
         align-items: flex-start;
@@ -255,115 +259,107 @@
         margin-top: 10px;
         font-size: 16px;
     }
+    .main-navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    .main-navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-navbar li {
+        margin: 10px 0;
+    }
+    .main-navbar a {
+        font-size: 16px;
+        padding: 10px;
+    }
 }
 
-.number{
-    background-color: rgb(196, 101, 13);
-    display: flex;
-    color: #ffd700;
-   
+@media (max-width: 480px) {
+    .marquee {
+        font-size: 14px;
+    }
+    .new-badge {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
 }
 
-.numbercontect{
-    justify-content: space-between;
-}
-
-.navbar {
-    width: 100%;
-    background-color: #333;
+/* Badge Styling */
+.new-badge {
+    background-color: red;
     color: white;
-  }
-  
-  
-  .top-navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: rgb(239, 86, 30);
-    font-size: 14px;
-  }
-  
-  .number-content {
-    display: flex;
-  }
-  
-  .contact-item {
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .contact-item i {
-    margin-right: 5px;
-  }
-  
-  .main-navbar {
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Navbar Styling */
+.main-navbar {
     width: 100%;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px 0;
 }
-  
-  .main-navbar ul {
+.main-navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .main-navbar li {
+}
+.main-navbar li {
     margin: 0 15px;
     position: relative;
-  }
-  
-  .main-navbar a {
+}
+.main-navbar a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     text-transform: uppercase;
-    text-transform: uppercase;
     transition: all 0.3s ease-in-out;
     padding: 8px 12px;
     border-radius: 6px;
-  }
-  
-  .main-navbar a:hover {
+}
+.main-navbar a:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #ffd700;
     transform: scale(1.1);
-  }
-  .main-navbar li::after {
+}
+
+/* Underline Effect on Hover */
+.main-navbar li::after {
     content: '';
     position: absolute;
     left: 50%;
     bottom: -5px;
-    width: 0;
+    width: 0%;
     height: 3px;
     background: #ffd700;
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
     border-radius: 2px;
 }
+.main-navbar li:hover::after {
+    width: 100%;
+    left: 0;
+}
 
+/* Navbar Icons */
 .main-navbar .pi {
-    font-size: 20px;  /* Increase icon size */
-    color: #ffd700; /* Bright gold color for visibility */
-    margin-right: 8px; /* Space between icon and text */
+    font-size: 20px;
+    color: #ffd700;
+    margin-right: 8px;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-
 .main-navbar a:hover .pi {
-    color: #ffffff; /* White on hover */
-    transform: scale(1.2); /* Slight zoom effect */
+    color: #ffffff;
+    transform: scale(1.2);
 }
 
-/* Ensure icons and text align properly */
-.main-navbar li {
-    display: flex;
-    align-items: center;
-}
-
+/* Scrollable Navbar */
 .scrolable_navbar {
     background-color: #e67f36;
     width: 100vw;
@@ -375,55 +371,64 @@
     position: relative;
 }
 
+/* Marquee Styling */
 .scrolable_navbar_sectionOne {
     padding: 5px 10px;
     background-color: #f06909;
     border-radius: 6px;
     font-weight: bold;
     color: white;
-    flex-shrink: 0; /* Prevents shrinking */
+    min-width: 80px; /* Ensures text does not shrink too much */
+    display: flex;
+    align-items: center;
 }
-
 .scrolable_navbar marquee {
-    flex-grow: 1; /* Allows the marquee to take available space */
+    flex-grow: 1;
     white-space: nowrap;
     overflow: hidden;
 }
-
 .scrolable_navbar marquee span {
-    margin-right: 25px; /* Adds gap between moving elements */
+    margin-right: 25px;
     display: inline-flex;
     align-items: center;
     font-size: 16px;
     color: white;
 }
 
-.new-badge {
-    background-color: red;
-    color: white;
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-left: 10px;
+/* Contact Section */
+.number {
+    background-color: rgb(196, 101, 13);
+    display: flex;
+    color: #ffd700;
+}
+.numbercontect {
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (max-width: 768px) {
-    .main-navbar {
-        flex-direction: column;
-        padding: 15px 0;
-    }
+/* Top Navbar */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(239, 86, 30);
+    font-size: 14px;
+}
+.number-content {
+    display: flex;
+}
+.contact-item {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.contact-item i {
+    margin-right: 5px;
+}
 
-    .main-navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-navbar li {
-        margin: 10px 0;
-    }
-
-    .main-navbar a {
-        font-size: 16px;
-        padding: 10px;
-    }
+/* Hover Effects */
+.main-navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffd700;
+    transform: scale(1.1);
 }
